@@ -9,7 +9,7 @@ export const findLastUserId = async () => {
     }
   )
     .sort({
-      createAt: -1,
+      createdAt: -1,
     })
     .lean()
   return lastUser?.id
