@@ -10,6 +10,8 @@ export const facultySearchableFields = [
   'name.lastName',
 ];
 
+export const designation = ['Professor', 'Lecturer'];
+
 export const facultyFilterableFields = [
   'searchTerm',
   'id',
