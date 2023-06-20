@@ -3,26 +3,26 @@
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-06T11:48:52.755Z'
+  timestamp: '2023-06-20T12:33:56.133Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-06T11:48:52.777Z'
+  timestamp: '2023-06-20T12:33:56.157Z'
 }
 {
   message: 'database connect successful',
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-06T11:57:27.437Z'
+  timestamp: '2023-06-20T12:36:46.678Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-06T11:57:27.453Z'
+  timestamp: '2023-06-20T12:36:46.689Z'
 }

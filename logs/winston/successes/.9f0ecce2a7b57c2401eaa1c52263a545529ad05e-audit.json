@@ -6,16 +6,6 @@
     "auditLog": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\.9f0ecce2a7b57c2401eaa1c52263a545529ad05e-audit.json",
     "files": [
         {
-            "date": 1686052129506,
-            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-06-06-17-success.log",
-            "hash": "378c288cee4ea624ba058100587b0d09f4b6b32e4e19beb9d113bad090df1a73"
-        },
-        {
-            "date": 1686053061730,
-            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-06-06-18-success.log",
-            "hash": "584e6d6d8d115f901a4326540a19f00b1b09e69c76e173a86bb45869c028c6d8"
-        },
-        {
             "date": 1686131831576,
             "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-07-06-15-success.log",
             "hash": "6e7795fd1b1f850ca645742d4f1fb64384c12e89b48130191b0f3ad0bd284cc0"
@@ -174,6 +164,21 @@
             "date": 1687261452679,
             "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-20-06-17-success.log",
             "hash": "bfba370cf6bcded4c44114773f03302eca3f2c7b37ab632f7b5b47d94ac40618"
+        },
+        {
+            "date": 1687264433555,
+            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-20-06-18-success.log",
+            "hash": "e11c337f8a001b74c24b5dee118a8ee9246b5f6c375eed89f775470863ef8089"
+        },
+        {
+            "date": 1687269102044,
+            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-20-06-19-success.log",
+            "hash": "8d01dbb1c13fa8438106668a69319b8f31f2d27b91975f4c64e1574d4d4a2b2c"
+        },
+        {
+            "date": 1687270122956,
+            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-20-06-20-success.log",
+            "hash": "f0d38f2b21cae2111479a08f319fce9cdb2cf96f1f471c08661c26da3dc7006c"
         }
     ],
     "hashType": "sha256"
