@@ -95,7 +95,6 @@ const createFaculty = async (
 
     // Generate faculty id
     const id = await generateFacultyId();
-    console.log(id);
 
     user.id = id;
     faculty.id = id;
