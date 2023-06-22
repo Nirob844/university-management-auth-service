@@ -2,6 +2,7 @@ import httpStatus from 'http-status';
 import mongoose from 'mongoose';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiError';
+import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 import { AcademicSemester } from '../academicSemester/academicSemester.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
@@ -30,14 +31,15 @@ const createStudent = async (
 
   const academicSemester = await AcademicSemester.findById(
     student.academicSemester
-  );
+  ).lean();
 
   // generate student id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-    const id = await generateStudentId(academicSemester);
+
+    const id = await generateStudentId(academicSemester as IAcademicSemester);
     user.id = id;
     student.id = id;
 

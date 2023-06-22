@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
+import { ILoginUserResponse } from './auth.interface';
 import { AuthService } from './auth.service';
 
 const loginUser = catchAsync(async (req: Request, res: Response) => {
@@ -16,7 +17,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
 
   // res.cookie('refreshToken', refreshToken, cookieOptions);
 
-  sendResponse(res, {
+  sendResponse<ILoginUserResponse>(res, {
     statusCode: 200,
     success: true,
     message: 'User login successfully !',
