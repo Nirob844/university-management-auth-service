@@ -2,7 +2,6 @@ import httpStatus from 'http-status';
 import mongoose from 'mongoose';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiError';
-import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 import { AcademicSemester } from '../academicSemester/academicSemester.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
@@ -31,27 +30,24 @@ const createStudent = async (
 
   const academicSemester = await AcademicSemester.findById(
     student.academicSemester
-  ).lean();
-
+  );
   // generate student id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
+    const id = await generateStudentId(academicSemester);
 
-    const id = await generateStudentId(academicSemester as IAcademicSemester);
     user.id = id;
     student.id = id;
 
     const newStudent = await Student.create([student], { session });
-
     if (!newStudent.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'failed to create student');
     }
     //set student -> _id into user.student
     user.student = newStudent[0]._id;
     const newUser = await User.create([user], { session });
-
     if (!newUser.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'failed to created user');
     }
