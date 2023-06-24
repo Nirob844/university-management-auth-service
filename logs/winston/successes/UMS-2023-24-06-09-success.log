@@ -3,12 +3,12 @@
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-09T16:39:15.395Z'
+  timestamp: '2023-06-24T03:44:50.871Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   service: 'user-service',
   label: 'UMS',
-  timestamp: '2023-06-09T16:39:15.410Z'
+  timestamp: '2023-06-24T03:44:50.883Z'
 }
