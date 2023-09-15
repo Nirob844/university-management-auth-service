@@ -1,0 +1,23 @@
+{
+  message: 'database connect successful',
+  level: 'info',
+  service: 'user-service',
+  label: 'UMS',
+  timestamp: '2023-09-15T05:25:54.138Z'
+}
+{
+  message: 'Example app listening on port 3001',
+  level: 'info',
+  service: 'user-service',
+  label: 'UMS',
+  timestamp: '2023-09-15T05:25:54.157Z'
+}
+Fri Sep 15 2023 11:27:21 } [UMS] info: database connect successful
+Fri Sep 15 2023 11:27:21 } [UMS] info: Example app listening on port 3001
+Fri Sep 15 2023 11:30:51 } [UMS] info: Example app listening on port 3001
+Fri Sep 15 2023 11:33:40 } [UMS] info: database connect successful
+Fri Sep 15 2023 11:33:40 } [UMS] info: Example app listening on port 3001
+Fri Sep 15 2023 11:36:21 } [UMS] info: database connect successful
+Fri Sep 15 2023 11:36:21 } [UMS] info: Example app listening on port 3001
+Fri Sep 15 2023 11:36:41 } [UMS] info: database connect successful
+Fri Sep 15 2023 11:36:41 } [UMS] info: Example app listening on port 3001
