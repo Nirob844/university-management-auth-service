@@ -1,25 +1,25 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\.9f0ecce2a7b57c2401eaa1c52263a545529ad05e-audit.json",
+  "files": [
+    {
+      "date": 1693896341055,
+      "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-05-09-12-success.log",
+      "hash": "7cfb5187bd096f51cce9bfb5165795007d8f254bba1feb93d99cc28b40a7e135"
     },
-    "auditLog": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\.9f0ecce2a7b57c2401eaa1c52263a545529ad05e-audit.json",
-    "files": [
-        {
-            "date": 1693896341055,
-            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-05-09-12-success.log",
-            "hash": "7cfb5187bd096f51cce9bfb5165795007d8f254bba1feb93d99cc28b40a7e135"
-        },
-        {
-            "date": 1694750856817,
-            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-15-09-10-success.log",
-            "hash": "e12673e7ff33f8134a6d04d85baa29397d3d4f1c501d5155ec8d6ea3c56b4f3d"
-        },
-        {
-            "date": 1694755548555,
-            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-15-09-11-success.log",
-            "hash": "f38bfec168847ba682e089e2e800b3d50078d971a5179b97427f8624d8fdb8c9"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1694750856817,
+      "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-15-09-10-success.log",
+      "hash": "e12673e7ff33f8134a6d04d85baa29397d3d4f1c501d5155ec8d6ea3c56b4f3d"
+    },
+    {
+      "date": 1694755548555,
+      "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\UMS-2023-15-09-11-success.log",
+      "hash": "f38bfec168847ba682e089e2e800b3d50078d971a5179b97427f8624d8fdb8c9"
+    }
+  ],
+  "hashType": "sha256"
 }
