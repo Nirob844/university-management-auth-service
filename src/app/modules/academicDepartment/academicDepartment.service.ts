@@ -2,6 +2,7 @@ import { SortOrder } from 'mongoose';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { AcademicFaculty } from '../academicFaculty/academicFaculty.model';
 import { academicDepartmentSearchableFields } from './academicDepartment.constants';
 import {
   AcademicDepartmentCreatedEvent,
@@ -109,7 +110,7 @@ const deleteDepartment = async (
 const insertIntoDBFromEvent = async (
   e: AcademicDepartmentCreatedEvent
 ): Promise<void> => {
-  const academicFaculty = await AcademicDepartment.findOne({
+  const academicFaculty = await AcademicFaculty.findOne({
     syncId: e.academicFacultyId,
   });
   const payload = {
