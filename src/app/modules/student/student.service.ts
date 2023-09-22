@@ -7,8 +7,13 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
 import ApiError from '../../../errors/ApiError';
+import { RedisClient } from '../../../shared/redis';
 import { User } from '../user/user.model';
-import { studentSearchableFields } from './student.constant';
+import {
+  EVENT_STUDENT_DELETE,
+  EVENT_STUDENT_UPDATED,
+  studentSearchableFields,
+} from './student.constant';
 import { IStudent, IStudentFilters } from './student.interface';
 import { Student } from './student.model';
 
@@ -117,7 +122,13 @@ const updateStudent = async (
 
   const result = await Student.findOneAndUpdate({ id }, updatedStudentData, {
     new: true,
-  });
+  })
+    .populate('academicFaculty')
+    .populate('academicDepartment')
+    .populate('academicSemester');
+  if (result) {
+    await RedisClient.publish(EVENT_STUDENT_UPDATED, JSON.stringify(result));
+  }
   return result;
 };
 
@@ -135,7 +146,9 @@ const deleteStudent = async (id: string): Promise<IStudent | null> => {
     session.startTransaction();
     //delete student first
     const student = await Student.findOneAndDelete({ id }, { session });
-    if (!student) {
+    if (student) {
+      await RedisClient.publish(EVENT_STUDENT_DELETE, JSON.stringify(student));
+    } else {
       throw new ApiError(404, 'Failed to delete student');
     }
     //delete user
