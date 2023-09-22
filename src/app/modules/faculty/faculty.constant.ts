@@ -24,3 +24,6 @@ export const facultyFilterableFields = [
   'academicDepartment',
   'designation',
 ];
+
+export const EVENT_FACULTY_UPDATED = 'faculty.updated';
+export const EVENT_FACULTY_DELETE = 'faculty.deleted';

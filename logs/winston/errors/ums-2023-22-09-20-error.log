@@ -1,0 +1,2 @@
+Fri Sep 22 2023 20:0:44 } [UMS] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Fri Sep 22 2023 20:23:4 } [UMS] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
