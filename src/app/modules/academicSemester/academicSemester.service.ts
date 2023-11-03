@@ -30,6 +30,7 @@ const getAllSemesters = async (
   paginationOption: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
   const { searchTerm, ...filtersData } = filters;
+  console.log(searchTerm);
   const andConditions = [];
   if (searchTerm) {
     andConditions.push({

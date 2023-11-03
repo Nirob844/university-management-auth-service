@@ -6,7 +6,7 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routers from './app/routes';
 const app: Application = express();
 
-app.use(cors());
+app.use(cors({ credentials: true }));
 app.use(cookieParser());
 
 //parser

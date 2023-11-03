@@ -1,8 +1,0 @@
-Wed Sep 20 2023 17:39:27 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:43:1 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:45:54 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:47:45 } [UMS] error: AcademicDepartment validation failed: academicFacultyId: Path `academicFacultyId` is required.
-Wed Sep 20 2023 17:48:47 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:56:12 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:57:17 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Wed Sep 20 2023 17:59:45 } [UMS] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.

@@ -82,16 +82,16 @@ const updateAdmin = async (
 
   const { name, ...adminData } = payload;
 
-  const updatedStudentData: Partial<IAdmin> = { ...adminData };
+  const updatedadminData: Partial<IAdmin> = { ...adminData };
 
   if (name && Object.keys(name).length > 0) {
     Object.keys(name).forEach(key => {
       const nameKey = `name.${key}` as keyof Partial<IAdmin>;
-      (updatedStudentData as any)[nameKey] = name[key as keyof typeof name];
+      (updatedadminData as any)[nameKey] = name[key as keyof typeof name];
     });
   }
 
-  const result = await Admin.findOneAndUpdate({ id }, updatedStudentData, {
+  const result = await Admin.findOneAndUpdate({ id }, updatedadminData, {
     new: true,
   });
   return result;
@@ -109,17 +109,17 @@ const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
 
   try {
     session.startTransaction();
-    //delete student first
-    const student = await Admin.findOneAndDelete({ id }, { session });
-    if (!student) {
-      throw new ApiError(404, 'Failed to delete student');
+    //delete admin first
+    const admin = await Admin.findOneAndDelete({ id }, { session });
+    if (!admin) {
+      throw new ApiError(404, 'Failed to delete admin');
     }
     //delete user
     await User.deleteOne({ id });
     session.commitTransaction();
     session.endSession();
 
-    return student;
+    return admin;
   } catch (error) {
     session.abortTransaction();
     throw error;
