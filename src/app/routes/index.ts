@@ -45,7 +45,7 @@ const moduleRoutes = [
     route: AdminRoutes,
   },
   {
-    path: '/management-department',
+    path: '/management-departments',
     route: ManagementDepartmentRoutes,
   },
 ];
