@@ -24,6 +24,16 @@
             "date": 1699008435410,
             "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\ums-2023-03-11-16-success.log",
             "hash": "caed4b2463351089f43c134e040b4d97f87a6dab90d091cf29d15179f32eda2b"
+        },
+        {
+            "date": 1699079379746,
+            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\ums-2023-04-11-12-success.log",
+            "hash": "190ec00ac9b4b54240e17c8c65f279ea40e67d44500290e607872f34c2c1de58"
+        },
+        {
+            "date": 1699253244033,
+            "name": "C:\\project\\level-2\\university-management-auth-service\\logs\\winston\\successes\\ums-2023-06-11-12-success.log",
+            "hash": "db7bda170754b53d83d3a38f072ac9f28307643bf5e330d9323b6bd1ac509b55"
         }
     ],
     "hashType": "sha256"
