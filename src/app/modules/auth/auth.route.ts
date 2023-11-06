@@ -2,7 +2,7 @@ import express from 'express';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 import auth from '../../middlewares/auth';
 import validateRequest from '../../middlewares/validateRequest';
-import { AUthController } from './auth.controller';
+import { AuthController } from './auth.controller';
 import { AuthValidation } from './auth.validation';
 
 const router = express.Router();
@@ -10,13 +10,13 @@ const router = express.Router();
 router.post(
   '/login',
   validateRequest(AuthValidation.loginZodSchema),
-  AUthController.loginUser
+  AuthController.loginUser
 );
 
 router.post(
   '/refresh-token',
   validateRequest(AuthValidation.refreshTokenZodSchema),
-  AUthController.refreshToken
+  AuthController.refreshToken
 );
 
 router.post(
@@ -28,7 +28,10 @@ router.post(
     ENUM_USER_ROLE.FACULTY,
     ENUM_USER_ROLE.STUDENT
   ),
-  AUthController.changePassword
+  AuthController.changePassword
 );
+
+router.post('/forgot-password', AuthController.forgotPassword);
+router.post('/reset-password', AuthController.resetPassword);
 
 export const AuthRoutes = router;
