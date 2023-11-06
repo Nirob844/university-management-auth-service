@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt';
 import httpStatus from 'http-status';
 import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
@@ -169,7 +170,7 @@ const forgotPassword = async (payload: { id: string }) => {
   const resetLink: string = config.resetLink + `token=${passResetToken}`;
 
   await sendEmail(
-    'nirob922399@gmail.com',
+    profile.email,
     `
       <div>
         <p>Hi, ${profile.name.firstName}</p>
@@ -184,9 +185,37 @@ const forgotPassword = async (payload: { id: string }) => {
   // }
 };
 
+const resetPassword = async (
+  payload: { id: string; newPassword: string },
+  token: string
+) => {
+  const { id, newPassword } = payload;
+  const user = await User.findOne({ id }, { id: 1 });
+
+  if (!user) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User not found!');
+  }
+
+  const verifiedToken = jwtHelpers.verifyToken(
+    token,
+    config.jwt.secret as string
+  );
+  if (!verifiedToken) {
+    throw new ApiError(httpStatus.FORBIDDEN, 'Invalid Refresh Token');
+  }
+
+  const password = await bcrypt.hash(
+    newPassword,
+    Number(config.bcrypt_salt_rounds)
+  );
+
+  await User.updateOne({ id }, { password });
+};
+
 export const AuthService = {
   loginUser,
   refreshToken,
   changePassword,
   forgotPassword,
+  resetPassword,
 };
