@@ -167,14 +167,16 @@ const forgotPassword = async (payload: { id: string }) => {
     '50m'
   );
 
-  const resetLink: string = config.resetLink + `token=${passResetToken}`;
+  const resetLink: string =
+    config.resetLink + `id=${user.id}&token=${passResetToken}`;
 
   await sendEmail(
-    profile.email,
+    'nirob35-844@diu.edu.bd',
     `
       <div>
         <p>Hi, ${profile.name.firstName}</p>
-        <p>Your password reset link: <a href=${resetLink}>Click Here</a></p>
+        <p>Your password reset link: <a href=${resetLink}>Click Here</a>
+        </p>
         <p>Thank you</p>
       </div>
   `
